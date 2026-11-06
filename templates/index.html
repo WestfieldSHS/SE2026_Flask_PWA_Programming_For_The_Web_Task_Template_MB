@@ -1,0 +1,29 @@
+<!-- row[0] = extID (not used in display) -->
+<!-- row[1] = name (media  title) -->
+<!-- row[2] = hyperlink (link destination) -->
+<!-- row[3] = genre (description text) -->
+<!-- row[4] = about (icon URL) -->
+<!-- row[5] = stars (not used in this template) -->
+<!-- row[6] = platform -->
+<!-- row[7] = status -->
+<!-- row[8] = image -->
+
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    {% for row in content %}
+    <div class="card">
+        <img
+            class="card-image"
+            src="{{ row[8] }}"
+            alt="Product image for {{ row[1] }}."
+        />
+        <h1 class="card-name">{{ row[1] }}</h1>
+        <p class="card-genre">{{ row[3] }}</p>
+        <p class="card-about">{{ row[4] }}</p>
+        <!--  <p class="card-stars">{{ row[5] }}</p> -->
+        <p class="card-platform">{{ row[6] }}</p>
+        <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
+    </div>
+    {% endfor %}
+</div> 
+{% endblock %}
