@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #fdfdfd;
+  background: #ffffff;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
 }
@@ -45,11 +45,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #14e6dd;
+  color: #a1c2f7;
 }
 
 nav h1 {
-  color: #106d69;
+  color: #1f66ff;
   margin-bottom: 0.5rem;
 }
 
@@ -90,6 +90,13 @@ nav h1 {
 }
 
 .card-genre {
+  width: 15rem;
+  white-space: nowrap;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+.card-about {
   text-overflow: ellipsis;
   width: 15rem;
   white-space: nowrap;
@@ -97,7 +104,7 @@ nav h1 {
   margin-bottom: 1rem;
 }
 
-.card-about {
+.card-platform {
   text-overflow: ellipsis;
   width: 15rem;
   white-space: nowrap;
@@ -115,15 +122,15 @@ nav h1 {
   margin: 0 1rem;
   padding: 0.25rem 2rem;
   transition: all 0.25s ease-in-out;
-  background: hsl(110, 21%, 93%);
-  color: hsl(141, 100%, 22%);
+  background: #72a8ff;
+  color: #3579e7;
   margin-bottom: 1rem;
 }
 
 .btn:focus,
 .btn:hover {
   box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.2);
-  background: hsl(111, 21%, 86%);
+  background: #a1c2f7;
 }
 
 .about-container {
