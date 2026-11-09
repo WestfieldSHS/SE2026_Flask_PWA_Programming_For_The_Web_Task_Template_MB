@@ -49,6 +49,7 @@ nav ul li a:hover {
 }
 
 nav h1 {
+  font-family: monospace;
   color: #1f66ff;
   margin-bottom: 0.5rem;
 }
@@ -97,11 +98,11 @@ nav h1 {
 }
 
 .card-about {
-  text-overflow: ellipsis;
-  width: 15rem;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  height: 150px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px;
+  border: 1px solid #d0d5ff;
 }
 
 .card-platform {
@@ -123,7 +124,7 @@ nav h1 {
   padding: 0.25rem 2rem;
   transition: all 0.25s ease-in-out;
   background: #72a8ff;
-  color: #3579e7;
+  color: #053176;
   margin-bottom: 1rem;
 }
 
