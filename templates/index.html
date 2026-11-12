@@ -1,12 +1,13 @@
 <!-- row[0] = extID (not used in display) -->
 <!-- row[1] = name (media  title) -->
 <!-- row[2] = hyperlink (link destination) -->
-<!-- row[3] = genre (description text) -->
-<!-- row[4] = about (icon URL) -->
-<!-- row[5] = stars (not used in this template) -->
-<!-- row[6] = platform -->
-<!-- row[7] = status -->
-<!-- row[8] = image -->
+<!-- row[3] = slogan (brief cool hype desc)-->
+<!-- row[4] = genre (description text) -->
+<!-- row[5] = about (icon URL) -->
+<!-- row[6] = stars (not used in this template) -->
+<!-- row[7] = platform -->
+<!-- row[8] = status -->
+<!-- row[9] = image -->
 
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
@@ -14,14 +15,14 @@
     <div class="card">
         <img
             class="card-image"
-            src="{{ row[8] }}"
+            src="{{ row[9] }}"
             alt="Product image for {{ row[1] }}."
         />
         <h1 class="card-name">{{ row[1] }}</h1>
-        <p class="card-genre">{{ row[3] }}</p>
-        <p class="card-about">{{ row[4] }}</p>
-        <!--  <p class="card-stars">{{ row[5] }}</p> -->
-        <p class="card-platform">{{ row[6] }}</p>
+        <!-- <p class="card-slogan">"{{ row[3] }}"</p> -->
+        <p class="card-genre">{{ row[4] }}</p>
+        <p class="card-about">{{ row[5] }}</p>
+        <p class="card-platform">{{ row[7] }}</p>
         <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
     </div>
     {% endfor %}

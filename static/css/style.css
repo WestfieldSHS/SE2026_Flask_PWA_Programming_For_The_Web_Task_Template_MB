@@ -52,6 +52,7 @@ nav h1 {
   font-family: monospace;
   color: #1f66ff;
   margin-bottom: 0.5rem;
+  margin-left: 7rem;
 }
 
 .container {
@@ -77,9 +78,9 @@ nav h1 {
 }
 
 .card-image {
-  width: 100%;
-  height: 15rem;
-  object-fit: cover;
+  width: 90%;
+  height: 30rem;
+  object-fit: cover; /* width initally 100% and height 15rem*/
 }
 
 .card-name {
@@ -90,10 +91,20 @@ nav h1 {
   margin-top: 0.5rem;
 }
 
-.card-genre {
+.card-slogan {
+  font-style: italic;
   width: 15rem;
   white-space: nowrap;
   overflow: auto;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #d0d5ff;
+}
+
+.card-genre {
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 1rem;
 }
 
