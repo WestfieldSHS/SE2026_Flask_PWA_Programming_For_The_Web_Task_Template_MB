@@ -81,3 +81,9 @@ VALUES (
     "Watched", 
     "https://image.tmdb.org/t/p/w1280/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg"
 );
+
+CREATE TABLE IF NOT EXISTS contact_list (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL
+);
