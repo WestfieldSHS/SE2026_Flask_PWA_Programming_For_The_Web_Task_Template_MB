@@ -1,5 +1,5 @@
 /*
-SELECT * FROM `media-copy`;
+SELECT * FROM `media`;
 
 SELECT * FROM "table-name";
 CREATE TABLE mediacopy(tvID INTEGER NOT NULL PRIMARY KEY, name TEXT NOT NULL, hyperlink TEXT NOT NULL, slogan TEXT NOT NULL, genre TEXT NOT NULL,about TEXT NOT NULL,stars TEXT NOT NULL,platform TEXT NOT NULL,status TEXT NOT NULL,image TEXT NOT NULL);
@@ -86,4 +86,17 @@ CREATE TABLE IF NOT EXISTS contact_list (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL UNIQUE,
     name TEXT NOT NULL
+);
+
+INSERT INTO media(name,hyperlink,slogan,genre,about,stars,platform,status,image)
+VALUES (
+    "The Mentalist", 
+    "https://www.themoviedb.org/tv/5920-the-mentalist", 
+    "Let the mind games begin.",
+    "Crime, Drama, Mystery", 
+    "Patrick Jane, a former celebrity psychic medium, uses his razor sharp skills of observation and expertise at 'reading' people to solve serious crimes with the California Bureau of Investigation.", 
+    "Simon Baker", 
+    "Netflix", 
+    "Unwatched", 
+    "https://image.tmdb.org/t/p/w1280/k0kMdO52LpC5JWgd0uWEH7gqcCe.jpg"
 );
