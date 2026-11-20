@@ -56,20 +56,21 @@ nav h1 {
 }
 
 .container {
+  position: relative;
+  left: -120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 1rem;
+  grid-column-gap: 18rem;
+  grid-row-gap: 100px;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  padding: 1rem 0;
 }
 
 .card {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 17rem;
+  flex-direction: row;
+  width: 35rem;
   background: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
@@ -77,9 +78,23 @@ nav h1 {
   overflow: hidden;
 }
 
+.card-two {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  width: 35rem;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-image {
-  width: 90%;
-  height: 30rem;
+  width: 21rem;
+  height: 21rem;
   object-fit: cover; /* width initally 100% and height 15rem*/
 }
 
@@ -101,11 +116,13 @@ nav h1 {
 }
 
 .card-genre {
+  text-align: flex;
   width: 15rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 1rem;
+  margin-left: 3rem;
 }
 
 .card-about {
@@ -121,7 +138,7 @@ nav h1 {
   width: 15rem;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 0.5rem 3rem;
 }
 
 .btn {

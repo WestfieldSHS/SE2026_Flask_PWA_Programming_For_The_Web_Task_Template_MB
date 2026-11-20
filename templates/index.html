@@ -18,12 +18,14 @@
             src="{{ row[9] }}"
             alt="Product image for {{ row[1] }}."
         />
-        <h1 class="card-name">{{ row[1] }}</h1>
-        <!-- <p class="card-slogan">"{{ row[3] }}"</p> -->
-        <p class="card-genre">{{ row[4] }}</p>
-        <p class="card-about">{{ row[5] }}</p>
-        <p class="card-platform">{{ row[7] }}</p>
-        <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
+        <div class="card-two">
+            <h1 class="card-name">{{ row[1] }}</h1>
+            <!-- <p class="card-slogan">"{{ row[3] }}"</p> -->
+            <p class="card-genre">{{ row[4] }}</p>
+            <p class="card-about">{{ row[5] }}</p>
+            <p class="card-platform">{{ row[7] }}</p>
+            <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
+        </div>
     </div>
     {% endfor %}
 </div> 

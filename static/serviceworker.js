@@ -8,9 +8,10 @@ const assets = [
   "static/icons/icon-192x192.png",
   "static/icons/icon-384x384.png",
   "static/icons/icon-512x512.png",
-  "static/icons/desktop_screenshot.png",
-  "static/icons/mobile_screenshot.png",
+  "static/icons/manifest-image.png",
 ];
+
+  // "static/icons/mobile_screenshot.png",
 
 const CATALOGUE_ASSETS = "catalogue-assets";
 
