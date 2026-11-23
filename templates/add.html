@@ -1,6 +1,22 @@
 {% extends 'layout.html' %} {% block title %}Subscribe to Newsletter{% endblock
 %} {% block content %}
 <div class="form-container">
+  <div class="sidebar">
+    <p>Pages</p>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html">Add Me</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+    <p>Watch Status</p>
+    <ul>
+        <a href="/" class="filter-btn">All</a>
+        <a href="/?status=Watched" class="filter-btn">Watched</a>
+        <a href="/?status=Watching" class="filter-btn">Watching</a>
+        <a href="/?status=Unwatched" class="filter-btn">Unwatched</a> 
+    </ul>
+  </div>
+
   <h1>📬 Subscribe to Our Newsletter</h1>
 
   {% if is_done %}

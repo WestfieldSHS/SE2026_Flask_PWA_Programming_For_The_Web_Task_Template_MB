@@ -87,3 +87,8 @@ window.addEventListener("appinstalled", () => {
   // Clear the deferred prompt
   deferredPrompt = null;
 });
+
+var toggleMenu = document.querySelector(".toggle-menu");
+toggleMenu.addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("active");  
+});

@@ -367,37 +367,24 @@ nav h1 {
   background: #ffebee;
 }
 
-.filter-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
+.sidebar {
+  background-color: #ccc;
+  position: fixed;
+  float: left;
+  top: 0;
+  left: -230px;
+  width: 230px;
+  height: 100%;  
+  transition: all 0.5s ease;
 }
 
-.filter-btn {
-  text-decoration: none;
-  padding: 0.5rem 1.5rem;
-  background: #72a8ff;
-  color: #053176;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.25s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+body.active .sidebar {
+  left: 0px;
+}
+body.active .resizable {
+  width: calc(90% - 230px);
 }
 
-.filter-btn:hover {
-  transform: translateY(-2px);
-  background: #a1c2f7;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.filter-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Offline status banner */
 .offline-banner {
   background: #f44336;
   color: #fff;
