@@ -2,7 +2,7 @@
 SELECT * FROM `media`;
 
 SELECT * FROM "table-name";
-CREATE TABLE mediacopy(tvID INTEGER NOT NULL PRIMARY KEY, name TEXT NOT NULL, hyperlink TEXT NOT NULL, slogan TEXT NOT NULL, genre TEXT NOT NULL,about TEXT NOT NULL,stars TEXT NOT NULL,platform TEXT NOT NULL,status TEXT NOT NULL,image TEXT NOT NULL);
+CREATE TABLE media(tvID INTEGER NOT NULL PRIMARY KEY, name TEXT NOT NULL, hyperlink TEXT NOT NULL, slogan TEXT NOT NULL, genre TEXT NOT NULL,about TEXT NOT NULL,stars TEXT NOT NULL,platform TEXT NOT NULL,status TEXT NOT NULL,image TEXT NOT NULL);
 
 INSERT INTO mediacopy(name,hyperlink,slogan,genre,about,stars,platform,status,image)
 VALUES (
