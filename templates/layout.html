@@ -11,14 +11,18 @@
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
   </head>
 
-  <body>
-    <div id="offline-banner" class="offline-banner" style="display: none;">
-      <p>⚠️ You are currently offline. Showing cached content.</p>
-    </div>
+<body>
+  <div id="offline-banner" class="offline-banner" style="display: none;">
+    <p>⚠️ You are currently offline. Showing cached content.</p>
+  </div>
 
-    <main>
-      {% include "partials/menu.html" %} {% block content %}{% endblock %}
-    </main>
-    <script src="static/js/app.js"></script>
-  </body>
+  <button id="install-button" class="install-button" style="display: none;">
+    📱 Install App
+  </button>
+
+  <main>
+    {% include "partials/menu.html" %} {% block content %}{% endblock %}
+  </main>
+  <script src="static/js/app.js"></script>
+</body>
 </html>
