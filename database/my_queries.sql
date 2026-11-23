@@ -100,3 +100,5 @@ VALUES (
     "Unwatched", 
     "https://image.tmdb.org/t/p/w1280/k0kMdO52LpC5JWgd0uWEH7gqcCe.jpg"
 );
+
+Contact Table --> Primary Key goes from 3 to 15 cuz I dropped a few entries before

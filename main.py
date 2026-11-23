@@ -12,10 +12,6 @@ def index():
   data = dbHandler.listMedia()
   return render_template('/index.html', content=data)
 
-def index():
-   data = dbHandler.listMedia()
-   return render_template('/index.html', content=data)
-
 @app.route('/add.html', methods=['POST', 'GET'])
 def add():
     """
