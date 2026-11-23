@@ -3,7 +3,7 @@ import sqlite3 as sql
 def listMedia():
   con = sql.connect("database/data_source.db")
   cur = con.cursor()
-  data = cur.execute('SELECT * FROM media').fetchall()
+  data = cur.execute('SELECT * FROM media').fetchall() # This is how flask passes data from the backend to the frontend
   con.close()
   return data
 
