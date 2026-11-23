@@ -11,9 +11,6 @@ def index():
   data = dbHandler.listMedia()
   return render_template('/index.html', content=data)
 
-if __name__ == '__main__':
-  app.run(debug=True, host='0.0.0.0', port=5000)
-
 def index():
    data = dbHandler.listMedia()
    return render_template('/index.html', content=data)
@@ -39,3 +36,8 @@ def add():
     else:
         # GET request - display empty form
         return render_template('/add.html')
+
+# should always be at the bottom
+
+if __name__ == '__main__':
+  app.run(debug=True, host='0.0.0.0', port=5000)
