@@ -7,6 +7,12 @@ def listMedia():
   con.close()
   return data
 
+def listMediaByStatus(status):
+    with sql.connect("database/data_source.db") as con:
+        cur = con.cursor()
+        data = cur.execute("SELECT * FROM media WHERE status = ?", (status,)).fetchall()
+    return data
+
 def insertContact(email, name):
     """
     Insert a new contact into the contact_list table.

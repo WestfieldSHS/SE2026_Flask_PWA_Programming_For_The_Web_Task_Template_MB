@@ -10,6 +10,13 @@
 <!-- row[9] = image -->
 
 {% extends 'layout.html' %} {% block content %}
+<div class="filter-buttons">
+  <a href="/" class="filter-btn">All</a>
+  <a href="/?status=Watched" class="filter-btn">Watched</a>
+  <a href="/?status=Watching" class="filter-btn">Watching</a>
+  <a href="/?status=Unwatched" class="filter-btn">Unwatched</a>
+</div>
+
 <div class="container">
     {% for row in content %}
     <div class="card">
