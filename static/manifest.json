@@ -58,7 +58,7 @@
   ],
   "screenshots": [
     {
-      "src": "images/manifest-image.png",
+      "src": "icons/manifest-image.png",
       "sizes": "1920x1080",
       "type": "image/png",
       "label": ""
