@@ -10,8 +10,11 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])       # Both GET and POST - can handle forms
 def index():
     status = request.args.get('status')
+    media_type = request.args.get('media_type')
     if status:
         data = dbHandler.listMediaByStatus(status)
+    elif media_type:
+        data = dbHandler.listMediaByType(media_type)
     else:
         data = dbHandler.listMedia()
     return render_template("/index.html", content=data)

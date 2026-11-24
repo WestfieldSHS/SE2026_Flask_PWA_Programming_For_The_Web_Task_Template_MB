@@ -20,9 +20,11 @@
     📱 Install App
   </button>
 
-  <main>
-    {% include "partials/menu.html" %} {% block content %}{% endblock %}
-  </main>
+  <div class = "layout">
+    <main>
+      {% include "partials/menu.html" %} {% block content %}{% endblock %}
+    </main>
+  </div>
   <script src="static/js/app.js"></script>
 </body>
 </html>

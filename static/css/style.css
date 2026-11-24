@@ -42,6 +42,7 @@ nav ul li a {
   text-decoration-line: none;
   text-transform: uppercase;
   color: #393b45;
+  cursor: pointer;
 }
 
 nav ul li a:hover {
@@ -52,7 +53,6 @@ nav h1 {
   font-family: monospace;
   color: #1f66ff;
   margin-bottom: 0.5rem;
-  margin-left: 7rem;
 }
 
 .container {
@@ -368,7 +368,7 @@ nav h1 {
 }
 
 .sidebar {
-  background-color: #ccc;
+  background-color: #A3AABE;
   position: fixed;
   float: left;
   top: 0;
@@ -376,6 +376,35 @@ nav h1 {
   width: 230px;
   height: 100%;  
   transition: all 0.5s ease;
+}
+
+.filter-btn.active {
+  text-decoration: black wavy underline;
+}
+
+.sidebar ul {
+  margin: 2rem;
+  list-style-type: none;
+}
+
+.sidebar ul li a {
+  color: black;
+  list-style: none;
+  text-decoration-line: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sidebar ul li a .filter-btn {
+  color: black;
+  list-style: none;
+  text-decoration-line: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+  color: rgb(61, 61, 61)
 }
 
 body.active .sidebar {
