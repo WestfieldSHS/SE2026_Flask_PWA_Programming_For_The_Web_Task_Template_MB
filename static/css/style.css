@@ -502,3 +502,42 @@ body.active .resizable {
     box-shadow: 0 4px 20px rgba(20, 230, 221, 0.7);
   }
 }
+
+.search-form {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.search-form input[type="search"] {
+    flex: 1;
+    padding: 7.5px 10.5px;
+    font-size: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.search-form button, .clear-btn {
+    padding: 7.5px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-form button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+.search-form button:hover {
+    background-color: #1d4ed8;
+}
+
+.clear-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+    display: inline-flex;
+    align-items: center;
+}

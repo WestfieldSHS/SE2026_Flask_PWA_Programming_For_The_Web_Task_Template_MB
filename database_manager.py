@@ -19,6 +19,15 @@ def listMediaByType(media_type):
         data = cur.execute("SELECT * FROM media WHERE media_type = ?", (media_type,)).fetchall()
     return data
 
+def listMediabySearch(search_query):
+    with sql.connect("database/data_source.db") as con:
+        cur = con.cursor()
+        data = cur.execute(
+            "SELECT * FROM media WHERE name LIKE ?" #OR about LIKE ?," if i want to add about-searching asw
+            (f"%{search_query}%", f"%{search_query}%")
+        )
+    return data
+
 def insertContact(email, name):
     """
     Insert a new contact into the contact_list table.

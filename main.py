@@ -11,10 +11,14 @@ app = Flask(__name__)
 def index():
     status = request.args.get('status')
     media_type = request.args.get('media_type')
+    search_query = request.args.get("q", "").strip()
+
     if status:
         data = dbHandler.listMediaByStatus(status)
     elif media_type:
         data = dbHandler.listMediaByType(media_type)
+    elif search_query:
+        data = dbHandler.listMediabySearch(search_query)
     else:
         data = dbHandler.listMedia()
     return render_template("/index.html", content=data)
