@@ -541,3 +541,7 @@ body.active .resizable {
     display: inline-flex;
     align-items: center;
 }
+
+.card-stars {
+  color: magenta;
+}
