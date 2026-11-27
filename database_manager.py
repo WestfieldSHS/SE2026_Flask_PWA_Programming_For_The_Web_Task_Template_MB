@@ -23,10 +23,10 @@ def listMediabySearch(search_query):
     with sql.connect("database/data_source.db") as con:
         cur = con.cursor()
         data = cur.execute(
-            "SELECT * FROM media WHERE name LIKE ?" #OR about LIKE ?," if i want to add about-searching asw
-            (f"%{search_query}%", f"%{search_query}%")
+            "SELECT * FROM media WHERE name LIKE ?",
+            (f"%{search_query}%",)
         )
-    return data
+        return data.fetchall()
 
 def insertContact(email, name):
     """

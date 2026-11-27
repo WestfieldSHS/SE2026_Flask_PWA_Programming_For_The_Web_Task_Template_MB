@@ -8,17 +8,7 @@
 <!-- row[7] = platform -->
 <!-- row[8] = status -->
 <!-- row[9] = image -->
-
-{% extends 'layout.html' %} {% block content %}
-
-<div class="container">
-    <div class="sidebar">
-    <ul>
-        <li><h2>Pages</h2></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="add.html">Add Me</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
+<div class="sidebar">
     <ul>
         <li><h2>Filters</h2></li>
         <li><a href="/" class="filter-btn {% if not request.args.get('status') %}active{% endif %}">Reset Filters</a></li>
@@ -34,8 +24,25 @@
         <li><a href="/?media_type=tvshow" class="filter-btn {% if request.args.get('media_type') == 'tvshow' %}active{% endif %}">TV Show</a></li>
         <li><a href="/?media_type=movie" class="filter-btn {% if request.args.get('media_type') == 'movie' %}active{% endif %}">Movie</a></li>
     </ul>
-  </div>
+</div>
 
+{% extends 'layout.html' %} {% block content %}
+
+<div class="search-container">
+    <form action="/" method="GET" class="search-form">
+        <button type="submit">Search</button>
+        {% if query %}
+        <a href="/" class="clear-btn">Clear</a>
+        {% endif %}
+        <input 
+            type="search" 
+            name="q" 
+            placeholder="Search catalogue..." 
+            value="{{ query }}"             >
+    </form>
+</div>
+
+<div class="container">
     {% for row in content %}
     <div class="card">
         <img
@@ -47,7 +54,7 @@
             <h1 class="card-name">{{ row[1] }}</h1>
             <!-- <p class="card-slogan">"{{ row[3] }}"</p> -->
             <p class="card-genre">{{ row[5] }}</p>
-            <p class="card-about">{{ row[6] }}</p>
+            <p class="card-about">{{ row[6][:150] }}...</p>
             <p class="card-platform">{{ row[8] }}</p>
             <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
         </div>
