@@ -3,5 +3,20 @@
   <h1>TV Shows & Movies</h1>
   <ul class="topnav">
     <li><a type="button" class="toggle-menu">Menu</a></li>
+    <li>
+      <div class="search-container">
+        <form action="/" method="GET" class="search-form">
+          <button type="submit">Search</button>
+          {% if query %}
+            <a href="/" class="clear-btn">Clear</a>
+          {% endif %}
+          <input 
+              type="search" 
+              name="q" 
+              placeholder="Search catalogue..." 
+              value="{{ query }}"             >
+          </form>
+      </div>
+    </li>
   </ul>
 </nav>

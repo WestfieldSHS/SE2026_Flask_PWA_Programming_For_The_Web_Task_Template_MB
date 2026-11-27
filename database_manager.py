@@ -2,9 +2,8 @@ import sqlite3 as sql
 
 def listMedia():
   con = sql.connect("database/data_source.db") # connects to the specified SQL database
-  cur = con.cursor() # enables sql statements to be ran and for actions like get, post, fetch, etc, to be ran
+  cur = con.cursor()
   data = cur.execute('SELECT * FROM media').fetchall() # This is how flask passes data from the backend to the frontend
-  # execute statement gets and prepares the results whilst fetchall passes them into the python memory to be displayed via html
   con.close() # closes the connection
   return data # sends data to the place that called it
 

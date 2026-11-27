@@ -20,25 +20,6 @@
         <li><a href="about.html">About</a></li>
     </ul>
     <ul>
-    <li>
-        <div class="search-container">
-          <form action="/" method="GET" class="search-form">
-            <input 
-                type="search" 
-                name="q" 
-                placeholder="Search catalogue..." 
-                value="{{ query }}"             
-                >
-            <button type="submit">Search</button>
-            {% if query %}
-              <a href="/" class="clear-btn">Clear</a>
-            {% endif %}
-          </form>
-      </div>
-    </li>
-    </ul>
-
-    <ul>
         <li><h2>Filters</h2></li>
         <li><a href="/" class="filter-btn {% if not request.args.get('status') %}active{% endif %}">Reset Filters</a></li>
     </ul>
@@ -63,12 +44,11 @@
             alt="Product image for {{ row[1] }}."
         />
         <div class="card-two">
-            <h1 class="card-name">{{ row[1] }}</h1> <!--e.g of jinja: template that reads like python syntax but sql data is passed into it-->
+            <h1 class="card-name">{{ row[1] }}</h1>
             <!-- <p class="card-slogan">"{{ row[3] }}"</p> -->
             <p class="card-genre">{{ row[5] }}</p>
             <p class="card-about">{{ row[6] }}</p>
             <p class="card-platform">{{ row[8] }}</p>
-            <p class="card-stars">{{ row[7] }}</p>
             <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
         </div>
     </div>
