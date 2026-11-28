@@ -70,15 +70,22 @@
 
     <div class="form-group">
       <label for="media_type">Media Type</label>
-      <input
-        type="text"
-        id="media_type"
-        name="media_type"
-        required
-        value="{{ media_type or '' }}"
-        placeholder="TV Show or Movie"
-        autocomplete="media_type"
-      />
+      <select 
+        id="media_type" 
+        name="media_type" 
+        required>
+        
+        <option value="">Select Media Type</option>
+        <option value="movie"
+          {% if media_type == 'movie' %}selected{% endif %}>
+          Movie
+        </option>
+        <option value="tvshow"
+          {% if media_type == 'tvshow' %}selected{% endif %}>
+          TV Show
+        </option>
+
+      </select>
     </div>
 
     <div class="form-group">
@@ -134,16 +141,27 @@
     </div>
 
     <div class="form-group">
-      <label for="platform">Platform</label>
-      <input
-        type="text"
-        id="platform"
-        name="platform"
-        required
-        value="{{ platform or '' }}"
-        placeholder="Where to watch?"
-        autocomplete="platform"
-      />
+      <label for="status">Status</label>
+      <select 
+        id="status" 
+        name="status" 
+        required>
+
+        <option value="">Select Status</option>
+        <option value="Watched"
+          {% if status == 'Watched' %}selected{% endif %}>
+          Watched
+        </option>
+        <option value="Watching"
+          {% if status == 'Watching' %}selected{% endif %}>
+          Watching
+        </option>
+        <option value="Unwatched"
+          {% if status == 'Unwatched' %}selected{% endif %}>
+          Unwatched
+        </option>
+
+      </select>
     </div>
 
     <div class="form-group">
