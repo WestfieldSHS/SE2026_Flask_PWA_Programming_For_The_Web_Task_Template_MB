@@ -3,12 +3,14 @@ from flask import render_template
 from flask import request
 import database_manager as dbHandler
 import sqlite3
+import random
 
 app = Flask(__name__)
 
 @app.route('/index.html', methods=['GET'])
 def index():
     data = dbHandler.listMedia()
+    data = random.sample(data, k=10)
     return render_template("/index.html", content=data)
 
 @app.route('/catalogue.html', methods=['GET'])     # Only GET - just viewing

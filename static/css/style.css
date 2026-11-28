@@ -93,6 +93,19 @@ nav h1 {
   transition: all 0.5s ease;
 }
 
+.index-container {
+  width: 100%;
+  transition: all 0.5s ease;
+  padding-left: 0px;
+}
+
+.index-container p {
+  color: #1f66ff;
+  font-weight: bolder;
+  font-size: 500%;
+  text-decoration: double;
+}
+
 .card {
   display: flex;
   align-items: stretch;
@@ -226,6 +239,46 @@ nav h1 {
   margin-top: 2rem;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.carousel {
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 60s infinite linear;
+  padding-right: 1em;
+}
+
+.horse {
+  flex: 0 0 300px; /* each card = 20% of viewport width */
+  height: 450px;
+  max-height: 450px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.horse-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
 }
 
 /* ============================================
@@ -454,10 +507,6 @@ nav h1 {
   transition: all 0.5s ease;
 }
 
-.filter-btn.active {
-  text-decoration: black wavy underline;
-}
-
 .sidebar ul {
   margin: 2rem;
   list-style-type: none;
@@ -488,6 +537,11 @@ body.active .sidebar {
 }
 
 body.active .container {
+  width: calc(100% - 230px);
+  margin-left: 230px;
+}
+
+body.active .index-container {
   width: calc(100% - 230px);
   margin-left: 230px;
 }
@@ -643,6 +697,14 @@ body.active nav {
 
   body.active .container {
     padding-left: 1rem;
+  }
+
+  .index-container {
+    padding: 1rem;
+  }
+
+  body.active .index-container {
+    padding: 1rem;
   }
 
   .card {
