@@ -74,7 +74,7 @@
         id="media_type" 
         name="media_type" 
         required>
-        
+
         <option value="">Select Media Type</option>
         <option value="movie"
           {% if media_type == 'movie' %}selected{% endif %}>
@@ -141,6 +141,19 @@
     </div>
 
     <div class="form-group">
+      <label for="platform">Platform</label>
+      <input
+        type="text"
+        id="platform"
+        name="platform"
+        required
+        value="{{ platform or '' }}"
+        placeholder="Where to watch?"
+        autocomplete="platform"
+      />
+    </div>
+
+    <div class="form-group">
       <label for="status">Status</label>
       <select 
         id="status" 
@@ -162,19 +175,6 @@
         </option>
 
       </select>
-    </div>
-
-    <div class="form-group">
-      <label for="status">Status</label>
-      <input
-        type="text"
-        id="status"
-        name="status"
-        required
-        value="{{ status or '' }}"
-        placeholder="Watched, Watching, or Unwatched?"
-        autocomplete="status"
-      />
     </div>
 
     <div class="form-group">
