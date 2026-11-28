@@ -42,3 +42,16 @@ def insertContact(email, name):
             "INSERT INTO contact_list (email, name) VALUES (?, ?)",
             (email, name)
         )
+
+def insertMedia(name, hyperlink, media_type, slogan, genre, about, stars, platform, status, image):
+    """Insert a new entry into the media table."""
+
+    with sql.connect("database/data_source.db") as con:
+        cur = con.cursor()
+
+        cur.execute(
+            "INSERT INTO media (name, hyperlink, media_type, slogan, genre, about, stars, platform, status, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (name, hyperlink, media_type, slogan, genre, about, stars, platform, status, image)
+        )
+
+        con.commit()

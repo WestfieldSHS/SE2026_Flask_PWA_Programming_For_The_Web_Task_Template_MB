@@ -1,13 +1,6 @@
 {% extends 'layout.html' %} {% block title %}Subscribe to Newsletter{% endblock
 %} {% block content %}
-<div class="form-container">
-    <div class="sidebar">
-    <ul>
-        <li><h2>Pages</h2></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="add.html">Add Me</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul>
+<div class="sidebar">
     <ul>
         <li><h2>Filters</h2></li>
         <li><a href="/" class="filter-btn {% if not request.args.get('status') %}active{% endif %}">Reset Filters</a></li>
@@ -23,8 +16,9 @@
         <li><a href="/?media_type=tvshow" class="filter-btn {% if request.args.get('media_type') == 'tvshow' %}active{% endif %}">TV Show</a></li>
         <li><a href="/?media_type=movie" class="filter-btn {% if request.args.get('media_type') == 'movie' %}active{% endif %}">Movie</a></li>
     </ul>
-  </div>
+</div>
 
+<div class="form-container">
   <h1>📬 Subscribe to Our Newsletter</h1>
 
   {% if is_done %}
@@ -44,7 +38,7 @@
   {% endif %}
 
   <!-- Form (shown on initial visit or after error) -->
-  <form method="POST" action="/add.html" class="contact-form">
+  <form method="POST" action="/add-contact.html" class="contact-form">
     <div class="form-group">
       <label for="name">Your Name:</label>
       <input

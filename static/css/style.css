@@ -43,6 +43,10 @@ nav ul {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav li {
   margin-right: 1rem;
 }
@@ -96,8 +100,7 @@ nav h1 {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19),
-              0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .card-two {
@@ -110,6 +113,31 @@ nav h1 {
   gap: 1rem;
   padding: 1rem;
 }
+
+.card-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background: #A3AABE;
+  height: 100%;
+  min-height: 385px;
+}
+.card-three:hover {
+  background: #747c92;
+}
+
+.card-three p {
+  color: black;
+  font-size: 1000%;  
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 .card-image {
   width: 220px;
